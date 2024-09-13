@@ -60,6 +60,13 @@ function addToOrder(itemName) {
       // Calculate and update the total price 
       totalPrice += fixedPrice;
       orderTotal.textContent = totalPrice;
+ 
+    // remove when clicked
+    orderList.addEventListener("click" , () =>{
+    orderList.remove()
+    totalPrice -= fixedPrice;
+    orderTotal.textContent = totalPrice; }
+  )
       
 
 } 
